@@ -3,323 +3,186 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marcos Saúl Lizano Jaca - Desarrollador Web</title>
+    <meta name="theme-color" content="#111313">
+    <meta name="description" content="Portafolio de Marcos Saúl Lizano Jaca, desarrollador web y técnico en sistemas en Zaragoza.">
+    <title>Marcos Saúl Lizano Jaca — Desarrollador web</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <canvas id="starfield"></canvas>
-    <!-- Header -->
-    <header>
-        <nav>
-            <div class="logo">MSL</div>
-            <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#sobre">Sobre Mí</a></li>
-                <li><a href="#skills">Skills</a></li>
+    <header class="site-header">
+        <nav class="nav container" aria-label="Navegación principal">
+            <a class="brand" href="#inicio" aria-label="Marcos Saúl Lizano, inicio">MSL<span>.</span></a>
+            <ul class="nav-links">
+                <li><a href="#sobre">Sobre mí</a></li>
                 <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#skills">Tecnologías</a></li>
                 <li><a href="#contacto">Contacto</a></li>
-                <li><a href="CV_Marcos-Saul-Lizano.pdf" download>CV</a></li>
             </ul>
+            <a class="nav-cv" href="CV_Marcos-Saul-Lizano.pdf" download>Descargar CV <span aria-hidden="true">↗</span></a>
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero" id="inicio">
-        <div class="hero-decorative">
-            <div class="hero-dot dot-1"></div>
-            <div class="hero-dot dot-2"></div>
-            <div class="hero-dot dot-3"></div>
-        </div>
-        <div class="hero-content">
-            <h1>Marcos Saúl Lizano Jaca</h1>
-            <p class="subtitle">Desarrollador Web & Técnico en Sistemas</p>
-            <p class="hero-typewriter">Creo <span class="typed-text"></span></p>
-            <p>Transformando ideas complejas en soluciones digitales eficientes y modernas</p>
-            <div class="cta-buttons">
-                <a href="#proyectos" class="btn btn-primary">Ver Mis Proyectos</a>
-                <a href="#contacto" class="btn btn-secondary">Contáctame</a>
-                <a href="CV_Marcos-Saul-Lizano.pdf" download class="btn btn-primary">Descargar CV</a>
+    <main>
+        <section class="showcase" id="inicio" aria-label="Introducción y proyectos">
+            <div class="showcase-visual" aria-hidden="true">
+                <canvas id="scene-canvas"></canvas>
+                <div class="scene-fallback"><span></span><i><em></em><em></em></i><b><em></em></b></div>
+                <div class="scene-glow"></div>
             </div>
-            
-            
-        </div>
-    </section>
 
-    <!-- Sobre Mí -->
-    <section class="about" id="sobre">
-        <div class="container">
-            <h2>Sobre Mí</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>
-                        Soy un desarrollador web naturalmente entusiasta y curioso, con una mentalidad enfocada en encontrar soluciones eficientes. Me considero una persona analítica y orientada a los detalles, capaz de transformar problemas complejos en código limpio y funcional.
-                    </p>
-                    <p>
-                        Gracias a mi experiencia trabajando en entornos digitales, he desarrollado una gran capacidad de adaptación y un fuerte sentido del trabajo en equipo. Disfruto afrontar nuevos desafíos técnicos sin perder de vista la comunicación clara y la empatía con el usuario.
-                    </p>
-                    <p>
-                        <strong>Formación:</strong> Actualmente cursando Grado Superior en Desarrollo de Aplicaciones Web en CampusDigital (2025 - Actualidad). Técnico en Sistemas Microinformáticos y redes completado en IES Santiago Hernández.
-                    </p>
-                </div>
-                <div>
-                    <div class="experience-card">
-                        <h3>🚀 Experiencia Laboral</h3>
-                        <h4>Técnico en Sistemas Microinformáticos y Redes</h4>
-                        <p class="experience-date">CampusDigital | 20/03/2026 - 26/06/2026</p>
-                        <ul>
-                            <li>Ensamblé, diagnóstiqué y reparé hardware y software informático</li>
-                            <li>Gestioné instalación y configuración de servidores Linux</li>
-                            <li>Brindé soporte técnico y resolución de incidencias</li>
-                            <li>Configuré entornos informáticos para uso académico</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contacto -->
-    <section class="contact" id="contacto">
-        <div class="container">
-            <h2>Contacto</h2>
-            <div class="contact-layout">
-                <div class="contact-info">
-                    <div class="contact-card">
-                        <div>
-                            <h3>✉️ Email</h3>
-                            <p>Envíame un correo directo y te responderé en menos de 24h.</p>
-                        </div>
-                        <a class="contact-action btn btn-secondary" href="mailto:slizanojaca@gmail.com">Enviar email</a>
-                    </div>
-                    <div class="contact-card">
-                        <div>
-                            <h3>📱 Teléfono</h3>
-                            <p>Contacta por formulario para obtenerlo</p>
-                        </div>
-                        <a class="contact-action btn btn-secondary" href="tel:+34620000000">Llamar </a>
-                    </div>
-                    <div class="contact-card">
-                        <div>
-                            <h3>📍 Ubicación</h3>
-                            <p>Zaragoza, Spain</p>
-                        </div>
-                        <a class="contact-action btn btn-secondary" href="https://www.google.com/maps/search/?api=1&query=Zaragoza+Spain" target="_blank">Ver en el mapa</a>
-                    </div>
-                    <div class="contact-card">
-                        <div>
-                            <h3>💼 LinkedIn</h3>
-                            <p>Conecta conmigo en LinkedIn y revisa mi experiencia profesional.</p>
-                        </div>
-                        <a class="contact-action btn btn-secondary" href="https://www.linkedin.com/in/sa%C3%BAl-lizano/" target="_blank">Ver perfil</a>
-                    </div>
-                </div>
-                <form class="contact-form" action="https://formspree.io/f/mvzlndpe" method="POST">
-                    <h3>Escríbeme un mensaje</h3>
-                    <p>Usa este formulario para enviarme una consulta rápida sobre tu proyecto o colaboración.</p>
-                    <div class="form-group">
-                        <label for="name">Nombre completo</label>
-                        <input type="text" id="name" name="name" placeholder="Tu nombre" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Correo electrónico</label>
-                        <input type="email" id="email" name="email" placeholder="tu@correo.com" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Mensaje</label>
-                        <textarea id="message" name="message" rows="6" placeholder="¿En qué proyecto te puedo ayudar?" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Enviar mensaje</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills -->
-    <section class="skills" id="skills">
-        <div class="container">
-            <h2>Skills & Competencias</h2>
-            <div class="skills-container">
-                <div class="skill-bar-container">
-                    <div class="skill-item">
-                        <div class="skill-label">
-                            <span class="skill-name">🌐 Frontend (HTML, CSS, JS)</span>
-                            <span class="skill-percent">85%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-bar-fill" style="width: 85%;"></div>
+            <div class="showcase-story">
+                <article class="story-panel intro-panel" data-scene="0">
+                    <div class="panel-copy">
+                        <p class="eyebrow"><span class="status-dot"></span> DISPONIBLE PARA NUEVOS RETOS · ZARAGOZA</p>
+                        <h1>Diseño y desarrollo <span>experiencias digitales.</span></h1>
+                        <p class="intro-text">Soy Marcos Saúl Lizano, desarrollador web y técnico en sistemas. Me gusta resolver retos técnicos en equipo y crear soluciones eficientes, funcionales y centradas en las personas.</p>
+                        <div class="hero-actions">
+                            <a class="button button-primary" href="#proyectos">Explorar proyectos <span aria-hidden="true">↓</span></a>
+                            <a class="text-link" href="mailto:slizanojaca@gmail.com">Hablemos <span aria-hidden="true">↗</span></a>
                         </div>
                     </div>
-                    <div class="skill-item">
-                        <div class="skill-label">
-                            <span class="skill-name">⚙️ Backend (PHP,Java)</span>
-                            <span class="skill-percent">75%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-bar-fill" style="width: 75%;"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-label">
-                            <span class="skill-name">🗄️ Bases de Datos (MySQL,Postgresql)</span>
-                            <span class="skill-percent">80%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-bar-fill" style="width: 80%;"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-label">
-                            <span class="skill-name">�️ Bases de Datos NoSQL</span>
-                            <span class="skill-percent">70%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-bar-fill" style="width: 70%;"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-label">
-                            <span class="skill-name">🛠️ Linux & Sistemas</span>
-                            <span class="skill-percent">78%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-bar-fill" style="width: 78%;"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-label">
-                            <span class="skill-name">🎨 Diseño & UX</span>
-                            <span class="skill-percent">82%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-bar-fill" style="width: 82%;"></div>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="skills-grid">
-                        <div class="skill-card">
-                            <div class="skill-icon">🌐</div>
-                            <h3>HTML/CSS</h3>
-                            <p>Estructura semántica y diseño responsivo</p>
-                        </div>
-                        <div class="skill-card">
-                            <div class="skill-icon">⚡</div>
-                            <h3>JavaScript</h3>
-                            <p>Interactividad y lógica dinámica</p>
-                        </div>
-                        <div class="skill-card">
-                            <div class="skill-icon">🔧</div>
-                            <h3>PHP</h3>
-                            <p>Backend y lógica de servidor</p>
-                        </div>
-                        <div class="skill-card">
-                            <div class="skill-icon">💾</div>
-                            <h3>MySQL</h3>
-                            <p>Bases de datos y SQL</p>
-                        </div>
-                        <div class="skill-card">
-                            <div class="skill-icon">�️</div>
-                            <h3>NoSQL</h3>
-                            <p>Bases de datos no relacionales</p>
-                        </div>
-                        <div class="skill-card">
-                            <div class="skill-icon">🐧</div>
-                            <h3>Linux</h3>
-                            <p>Administración de sistemas</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Proyectos -->
-    <section class="projects" id="proyectos">
-        <div class="container">
-            <h2>Mis Proyectos</h2>
-            <p class="section-note">Una línea de tiempo con los proyectos más importantes ordenados por lanzamiento.</p>
-            <div class="projects-timeline">
-                <div class="timeline-track"></div>
-
-                <article class="timeline-card">
-                    <span class="timeline-marker">01</span>
-                    <div class="project-header">
-                        <h3>Gestión de Equipos</h3>
-                        <p class="project-tag">proyecto01-gestion-equipos</p>
-                    </div>
-                    <div class="project-body">
-                        <p>Sistema completo de gestión de equipos informáticos para Campus Digital en Zaragoza. Permite registrar, clasificar y administrar el inventario de hardware en el centro.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">PHP</span>
-                            <span class="tech-tag">HTML</span>
-                            <span class="tech-tag">CSS</span>
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">MySQL</span>
-                        </div>
-                        <a href="https://github.com/saul-lizano/proyecto01-gestion-equipos" class="project-link" target="_blank">Ver en GitHub →</a>
-                    </div>
+                    <div class="scroll-hint"><span class="scroll-line"></span> DESLIZA O USA ↑ / ↓ PARA EXPLORAR</div>
                 </article>
 
-                <article class="timeline-card">
-                    <span class="timeline-marker">02</span>
-                    <div class="project-header">
-                        <h3>Gestión de Biblioteca</h3>
-                        <p class="project-tag">proyecto02-gestion-biblioteca-escolar</p>
-                    </div>
-                    <div class="project-body">
-                        <p>Plataforma de gestión de biblioteca escolar para el CEIP Andrés Manjón de Zaragoza. Administra catálogos de libros, préstamos y accesos para estudiantes y personal administrativo.</p>
+                <article class="story-panel project-panel" id="proyectos" data-scene="1">
+                    <div class="panel-copy">
+                        <p class="eyebrow"><span>PROYECTO 01</span> · EDUCACIÓN</p>
+                        <h2>Gestión de <span>biblioteca.</span></h2>
+                        <p class="project-description">Plataforma para el CEIP Andrés Manjón que permite organizar el catálogo y gestionar los préstamos y el acceso de la comunidad educativa.</p>
                         <div class="project-tech">
-                            <span class="tech-tag">PHP</span>
-                            <span class="tech-tag">HTML</span>
-                            <span class="tech-tag">CSS</span>
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">MySQL</span>
+                            <span>PHP</span><span>JavaScript</span><span>MySQL</span>
                         </div>
-                        <a href="https://github.com/saul-lizano/proyecto02-gestion-biblioteca-escolar" class="project-link" target="_blank">Ver en GitHub →</a>
+                        <a class="text-link" href="https://github.com/saul-lizano/proyecto02-gestion-biblioteca-escolar" target="_blank" rel="noopener noreferrer">Ver proyecto en GitHub <span aria-hidden="true">↗</span></a>
                     </div>
+                    <span class="panel-index">01 <span>/ 04</span></span>
                 </article>
 
-                <article class="timeline-card">
-                    <span class="timeline-marker">03</span>
-                    <div class="project-header">
-                        <h3>Blog Médicas Mundo</h3>
-                        <p class="project-tag">proyecto03-blog-medicas-mundo</p>
-                    </div>
-                    <div class="project-body">
-                        <p>Plataforma con artículos pensados en la reintegración laboral y para reconocer los derechos de las profesionales de la salud.</p>
+                <article class="story-panel project-panel" data-scene="2">
+                    <div class="panel-copy">
+                        <p class="eyebrow"><span>PROYECTO 02</span> · INVENTARIO</p>
+                        <h2>Gestión de <span>equipos.</span></h2>
+                        <p class="project-description">Sistema de gestión de equipos desarrollado para Sami, pensado para mantener sus activos organizados y facilitar su administración.</p>
                         <div class="project-tech">
-                            <span class="tech-tag">PHP</span>
-                            <span class="tech-tag">HTML</span>
-                            <span class="tech-tag">CSS</span>
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">Responsive Design</span>
+                            <span>PHP</span><span>JavaScript</span><span>MySQL</span>
                         </div>
-                        <a href="https://github.com/saul-lizano/proyecto03-blog-medicas-mundo" class="project-link" target="_blank">Ver en GitHub →</a>
+                        <a class="text-link" href="https://github.com/saul-lizano/proyecto01-gestion-equipos" target="_blank" rel="noopener noreferrer">Ver proyecto en GitHub <span aria-hidden="true">↗</span></a>
                     </div>
+                    <span class="panel-index">02 <span>/ 04</span></span>
+                </article>
+
+                <article class="story-panel project-panel" data-scene="3">
+                    <div class="panel-copy">
+                        <p class="eyebrow"><span>PROYECTO 03</span> · BLOG</p>
+                        <h2>Médicas del <span>Mundo.</span></h2>
+                        <p class="project-description">Un espacio de artículos que apoya la reintegración laboral y da visibilidad a los derechos de las profesionales de la salud.</p>
+                        <div class="project-tech">
+                            <span>PHP</span><span>JavaScript</span><span>Responsive</span>
+                        </div>
+                        <a class="text-link" href="https://github.com/saul-lizano/proyecto03-blog-medicas-mundo" target="_blank" rel="noopener noreferrer">Ver proyecto en GitHub <span aria-hidden="true">↗</span></a>
+                    </div>
+                    <span class="panel-index">03 <span>/ 04</span></span>
+                </article>
+
+                <article class="story-panel project-panel" data-scene="4">
+                    <div class="panel-copy">
+                        <p class="eyebrow"><span>PROYECTO 04</span> · GESTIÓN</p>
+                        <h2>Solución para <span>Flores Nuria.</span></h2>
+                        <p class="project-description">Sistema de gestión desarrollado como parte de la formación en Desarrollo de Aplicaciones Web.</p>
+                    </div>
+                    <span class="panel-index">04 <span>/ 04</span></span>
                 </article>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>© 2026 Marcos Saúl Lizano Jaca. Todos los derechos reservados.</p>
-            <p>Desarrollador Web | Técnico en Sistemas | <span id="secret-trigger">Apasionado por la Tecnología</span></p>
-        </div>
+        <section class="about section-shell" id="sobre">
+            <div class="container">
+                <p class="eyebrow section-kicker">UN POCO SOBRE MÍ</p>
+                <div class="section-heading">
+                    <h2>Curiosidad técnica,<br><span>enfoque humano.</span></h2>
+                    <div class="about-copy">
+                        <p>Desarrollador web entusiasta y curioso, con mentalidad analítica y orientación a resolver problemas. Me adapto a nuevos entornos y disfruto afrontando retos técnicos en equipo.</p>
+                        <p>Busco crear soluciones eficientes, funcionales y centradas en las necesidades de las personas que las usan.</p>
+                    </div>
+                </div>
+                <div class="education-card">
+                    <span class="education-mark">01</span>
+                    <div>
+                        <p class="eyebrow">FORMACIÓN</p>
+                        <h3>Desarrollo de Aplicaciones Web</h3>
+                        <p>Campus Digital FP · 2025 — Actualidad</p>
+                    </div>
+                    <div class="education-secondary">
+                        <h3>Sistemas Microinformáticos y Redes</h3>
+                        <p>IES Santiago Hernández · 2023 — 2025</p>
+                    </div>
+                </div>
+                <article class="work-card">
+                    <span class="education-mark">02</span>
+                    <div class="work-heading">
+                        <p class="eyebrow">EXPERIENCIA · CAMPUS DIGITAL</p>
+                        <h3>Administración y despliegue de servidores</h3>
+                        <p>2025</p>
+                    </div>
+                    <ul>
+                        <li>Administración y despliegue de servidores.</li>
+                    </ul>
+                </article>
+                <div class="certifications-card">
+                    <p class="eyebrow">CERTIFICACIONES</p>
+                    <div class="certification-list">
+                        <span>Fundamentos de Azure</span>
+                        <span>IT Specialist · Cybersecurity</span>
+                        <span>IT Specialist · Artificial Intelligence</span>
+                        <span>IT Specialist · Data Analytics</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="skills section-shell" id="skills">
+            <div class="container">
+                <p class="eyebrow section-kicker">HERRAMIENTAS DE TRABAJO</p>
+                <div class="section-heading">
+                    <h2>Ideas listas<br><span>para construirse.</span></h2>
+                    <p class="skills-intro">Una base versátil para crear experiencias web, construir servicios y mantener sistemas fiables.</p>
+                </div>
+                <div class="skills-grid">
+                    <article class="skill-card"><span class="skill-number">01</span><h3>Frontend</h3><p>HTML · CSS · JavaScript</p></article>
+                    <article class="skill-card"><span class="skill-number">02</span><h3>Backend</h3><p>PHP · Java</p></article>
+                    <article class="skill-card"><span class="skill-number">03</span><h3>Datos</h3><p>MySQL · NoSQL</p></article>
+                    <article class="skill-card"><span class="skill-number">04</span><h3>Entorno</h3><p>IDEs · Linux · Sistemas</p></article>
+                    <article class="skill-card"><span class="skill-number">05</span><h3>Diseño</h3><p>UX &amp; UI</p></article>
+                    <article class="skill-card"><span class="skill-number">06</span><h3>Colaboración</h3><p>Scrum · Kanban · Comunicación</p></article>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact section-shell" id="contacto">
+            <div class="container contact-layout">
+                <div class="contact-intro">
+                    <p class="eyebrow section-kicker">¿TIENES ALGO EN MENTE?</p>
+                    <h2>Hagamos algo<br><span>que merezca la pena.</span></h2>
+                    <p>Cuéntame tu idea, proyecto o pregunta. Estoy encantado de conversar.</p>
+                    <a class="button button-primary" href="mailto:slizanojaca@gmail.com">Escríbeme un email <span aria-hidden="true">↗</span></a>
+                </div>
+                <div class="contact-details">
+                    <a class="contact-row" href="mailto:slizanojaca@gmail.com"><span>Email</span><strong>slizanojaca@gmail.com</strong><span aria-hidden="true">↗</span></a>
+                    <a class="contact-row" href="https://www.linkedin.com/in/sa%C3%BAl-lizano/" target="_blank" rel="noopener noreferrer"><span>LinkedIn</span><strong>Conectemos profesionalmente</strong><span aria-hidden="true">↗</span></a>
+                    <a class="contact-row" href="https://www.google.com/maps/search/?api=1&amp;query=Zaragoza+Spain" target="_blank" rel="noopener noreferrer"><span>Ubicación</span><strong>Zaragoza, España</strong><span aria-hidden="true">↗</span></a>
+                    <a class="contact-row" href="CV_Marcos-Saul-Lizano.pdf" download><span>Currículum</span><strong>Descargar PDF</strong><span aria-hidden="true">↓</span></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container"><a class="brand" href="#inicio">MSL<span>.</span></a><p>© 2026 Marcos Saúl Lizano Jaca</p><p>Hecho con intención en Zaragoza.</p></div>
     </footer>
 
-    <!-- Secret Mode Elements -->
-    <div id="secret-ship" class="secret-ship">🚀</div>
-    <div id="secret-overlay" class="secret-overlay"></div>
-    <div id="secret-score" class="secret-score">Score: 0</div>
-
-    <div id="cursor-follower"></div>
-    <div id="cursor-glow"></div>
-
     <script src="script.js"></script>
+    <script type="module" src="scene.js"></script>
 </body>
 </html>
